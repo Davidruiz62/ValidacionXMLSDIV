@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: David Ruiz
+Curso: Daw1
+Fecha 18/04/2025
+Ejercicio 3
+-->
+<!--Ejercicio heladeria 1-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="heladeria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element name="chocolate" type="gramos"/>
+          <xs:element name="limon" type="gramos"/>
+        </xs:choice>
+        <xs:element name="turron" type="gramos" minOccurs="0"/>
+        <xs:element name="vainilla" type="gramos" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="fabricado" type="xs:date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="gramos">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

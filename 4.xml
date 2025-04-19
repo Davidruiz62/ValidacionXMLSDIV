@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: David Ruiz
+Curso: Daw1
+Fecha 18/04/2025
+Ejercicio 4
+-->
+<!--Ejercicio heladeria 2-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="heladeria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fresa" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="chocolate" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="vainilla" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

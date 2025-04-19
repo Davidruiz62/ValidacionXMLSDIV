@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: David Ruiz
+Curso: Daw1
+Fecha 18/04/2025
+Ejercicio 5
+-->
+<!--Ejercicio FAQ-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="faq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="autor" type="xs:string"/>
+              <xs:element name="email" type="xs:string"/>
+              <xs:element name="version" type="xs:string"/>
+              <xs:element name="fecha" type="xs:date"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="part" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="q" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="qtext" type="xs:string" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
